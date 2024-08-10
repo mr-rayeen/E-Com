@@ -1,0 +1,65 @@
+.buy-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 50%;
+    border: 1px solid;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    box-shadow: 6px 5px 4px dimgrey;
+    margin-bottom: 3rem;
+}
+.buy-card{
+    display: flex;
+    column-gap: 4rem;
+    justify-content: center;
+    border: 1px solid;
+    width: 80%;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 4px 6px 5px lightslategrey;
+    height: 8rem;
+}
+.buy-card-image{
+    width: 200px;
+}
+.buy-card-image > img{
+    height: 8rem;
+}
+.buy-card-content>ul{
+    list-style: none;
+}
+.buy-card-content{
+    align-self: center;
+    text-align: left;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.address-form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    border: 1px solid;
+    width: 50%;
+    padding: 2rem;
+    align-items: center;
+    border-radius: 2rem;
+    margin-top: 2rem;
+}
+.address-input{
+    padding: 0.4rem;
+    width: 70%;
+    border-radius: 7px;
+}
+.city-zip{
+    display: flex;
+    column-gap: 0.3rem;
+    width: 73%;
+}

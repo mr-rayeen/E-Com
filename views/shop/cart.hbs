@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    {{>css}}
+    
+</head>
+<body>
+    {{>navbar}}
+    <div class="main-container">
+        <h1>Welcome To Cart</h1>
+        <div>
+            {{#if totalPrice}}
+            Total Price: <span class="totalPrice" >{{totalPrice}}</span>
+            {{/if}}
+        </div>
+        <div class="cart-list-container">
+            <ul class="cart-list">
+                {{#each cart as |c|}}
+                <li class="cart-item">
+                    <div class="cart-product-image">
+                        <img src={{c.id.imageUrl}} alt="">
+                    </div>
+                    <div class="art-producct-details">
+                        <p>Name: {{c.id.name}}</p>
+                        <p>Price: {{c.id.price}}</p>
+
+                        <div>
+                            Quantity:
+                            <a class="quantity" href="/shop/cart/increase/{{c.id._id}}">
+                                <button class="increaseQuantity quantity-button">
+                                    +
+                                </button>
+                            </a>
+                            {{c.quantity}}
+                            <a class="quantity" href="/shop/cart/decrease/{{c.id._id}}">
+                                <button class="decreaseQuantity quantity-button">
+                                    -
+                                </button>
+                            </a>
+                            <div id={{c.id._id}}></div>
+                        </div>
+                    </div>
+            </li>
+                {{/each}}
+            </ul>
+            {{#if totalPrice}}
+            <div class="buy-btn-box">
+                <a href="/shop/cart/buy" >
+                    <button class="cartBuy">
+                         Buy Now
+                   </button>
+                </a>
+            </div>
+            {{/if}}
+            {{#unless totalPrice}}
+            <h2>Your Cart is Empty!</h2>
+            {{/unless}}
+        </div>
+    </div>
+    <script src="/js/utils/axios.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

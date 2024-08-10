@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    {{>css}}
+</head>
+<body>
+    {{>navbar}}
+
+    <div class="main-container">
+        <h1>Welcome to Product Detail Page!</h1>
+        <div class="card">
+                    <div class="card-image">
+                        <img src="{{product.imageUrl}}" alt="ProductImage">
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Name: {{product.name}}</li>
+                            <li>Price: {{product.price}}</li>
+                            <li>Description: {{product.description}}</li>
+                            <li>Seller:  {{product.seller}}</li>
+                            <button><a href="/shop/cart/add/{{product._id}}">
+                                    🛒
+                                </a>
+                            </button>
+                            <button><a href="/shop/cart/buy/{{product._id}}">
+                                    Buy Now
+                                </a>
+                            </button>
+                            
+                              <h3>Reviews:</h3>
+                              <ul>
+                                {{#each product.reviews as |r|}}
+                                <li>{{r}}</li>
+                                {{/each}}
+                              </ul>
+                            
+                        </ul>
+                    </div>
+    </div>
+</body>
+</html>

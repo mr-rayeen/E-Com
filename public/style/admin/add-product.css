@@ -1,0 +1,40 @@
+.form-details{
+    width: fit-content;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: baseline; */
+    column-gap: 1.5rem;
+    margin: 2rem  auto;
+}
+.product-details{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.product-data{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.8rem;
+}
+form>button{
+    width: 8rem;
+    padding: 0.6rem;
+    border-radius: 3rem;
+    background-color: blueviolet;
+    border: none;
+    font-size: 1rem;
+}
+.add-product-form{
+    margin: auto;
+    width: 35%;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 2rem;
+    box-shadow: 7px 6px 3px 0px grey;
+    text-align: start;
+    padding: 1rem;
+    margin-top: 2rem;
+}

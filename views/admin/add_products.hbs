@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Products</title>
+    {{>css}}
+</head>
+<body>
+    {{>navbar}}
+
+<div class="main-container">
+        <h1>Welcome to Admin's Add New Product Page!</h1>
+
+    <form action="/admin/products/add" method="POST" class="add-product-form">
+        <h3>Please Provide Given Details Below:</h3>
+        
+        <div class="form-details">
+            <div class="product-details">
+                <label for="name">Product Name : </label>
+                <label for="price">Product Price : </label>
+                <label for="imageUrl">Product Image URL : </label>
+                <label for="seller">Seller Name : </label>
+                <label for="category">Product Category : </label>
+                <label for="description">Product Description : </label>
+            </div>
+
+            <div class="product-data">
+                <input type="text" name="name" >
+                <input type="text" name="price" >
+                <input type="text" name="imageUrl" >
+                <input type="text" name="seller" >
+                <input type="text" name="category" >
+                <textarea type="text" name="description" cols="20" rows="10"></textarea>
+            </div>
+
+        </div>
+            <button type="submit">Add Product</button>
+    </form>
+</div>
+</body>
+</html>

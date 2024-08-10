@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History</title>
+    {{>css}}
+</head>
+<body>
+    {{>navbar}}
+
+    <div class="main-container">
+        <h2>
+            {{msg}}
+        </h2>
+        <br>
+        <h3>
+            Your Order History!
+        </h3>
+        <div class="order-container">
+            {{#each orders as  |order|}}
+            <div class="order-box">
+                {{#each order.products as |item|}}
+                <div><img src="{{item.product.imageUrl}}" alt="product-img"></div>
+                    
+                <div class="order-item-detail">
+                <div><strong>Product:</strong> {{item.product.name}}</div>
+                <div><strong>Quantity:</strong> {{item.quantity}}</div>
+                <div><strong>Price:</strong> {{item.price}}</div>
+                </div>
+                {{/each}}
+            </div>
+            <div><strong>Total Order Price:</strong> {{order.totalPrice}}</div>
+            <div class="order-date"><strong>Order Date:</strong> {{order.date}}</div>
+            {{/each}}
+        </div>
+    </div>
+</body>
+</html>

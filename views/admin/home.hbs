@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    {{>css}}
+</head>
+<body>
+    
+    {{>navbar}}
+    
+<div class="main-container">
+    <h1>Welcome to Admin Page</h1>
+
+    <div class="button-group">
+        <button><a href="/admin/products/all">View All Products</a></button>
+        <button><a href="/admin/products/add">Add New Products</a></button>
+    </div>
+    {{>categoryWise}}
+</div>
+
+</body>
+</html>

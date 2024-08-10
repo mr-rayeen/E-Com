@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy</title>
+    {{>css}}
+    <link rel="stylesheet" href="/style/cart/buy.css">
+</head>
+<body>
+    {{>navbar}}
+    <div class="main-container">
+        <h1>You are buying these Products!</h1>
+        <div class="buy-list">
+            {{#each cart as |product|}}
+                <div class="buy-card">
+                    <div class="buy-card-image">
+                        <img src="{{product.id.imageUrl}}" alt="ProductImage">
+                    </div>
+                    <div class="buy-card-content">
+                        <ul>
+                            <li>Name: {{product.id.name}}</li>
+                            <li>Price: {{product.id.price}}</li>
+                            <li>Quantity: {{product.quantity}}</li>
+                        </ul>
+                    </div>
+                </div>
+            {{/each}}
+            Total Amount: {{totalPrice}}
+        </div>
+        <h1>Please Provide Your Shipping Address!</h1>
+
+        <form action="/shop/cart/buy" method="post" class="address-form">
+            <input class="address-input" type="text" name="house" placeholder="House Number/ Apartment Number..."/>
+            <input class="address-input" type="text" name="street" placeholder="Enter Street Name..."/>
+            <div class="city-zip"><input class="address-input" type="text" name="city" placeholder="Enter City Name"/><input class="address-input" type="number" name="zipcode" placeholder="Zipcode"></div>
+            <input class="address-input" type="number" name="phone" placeholder="Enter Mobile Number"/>
+            <input class="address-input" type="email" name="email" placeholder="Enter Email Address"/>
+            <input type="hidden" name="totalPrice"  value={{totalPrice}} />
+            <button class="place-order" type="submit">Place Order</button>
+        </form>
+
+    </div>
+</body>
+</html>

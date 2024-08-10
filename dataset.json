@@ -1,0 +1,82 @@
+[
+  {
+    "name": "iPhone 9",
+    "price": 549,
+    "description": "An apple mobile which is nothing like apple",
+    "category": "Smartphones",
+    "imageUrl": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+    "seller": "Apple"
+  },
+  {
+    "name": "iPhone X",
+    "price": 899,
+    "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+    "category": "Smartphones",
+    "imageUrl": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+    "seller": "Apple"
+  },
+  {
+    "name": "Samsung Universe 9",
+    "price": 1249,
+    "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+    "category": "Smartphones",
+    "imageUrl": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
+    "seller": "Samsung"
+  },
+  {
+    "name": "OPPOF19",
+    "price": 280,
+    "description": "OPPO F19 is officially announced on April 2021.",
+    "category": "Smartphones",
+    "imageUrl": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
+    "seller": "OPPO"
+  },
+  {
+    "name": "Huawei P30",
+    "price": 499,
+    "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+    "category": "Smartphones",
+    "imageUrl": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
+    "seller": "Huawei"
+  },
+  {
+    "name": "MacBook Pro",
+    "price": 1749,
+    "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+    "category": "Laptops",
+    "imageUrl": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
+    "seller": "Apple"
+  },
+  {
+    "name": "Samsung Galaxy Book",
+    "price": 1499,
+    "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
+    "category": "Laptops",
+    "imageUrl": "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg",
+    "seller": "Samsung"
+  },
+  {
+    "name": "Microsoft Surface Laptop 4",
+    "price": 1499,
+    "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+    "category": "Laptops",
+    "imageUrl": "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg",
+    "seller": "Microsoft Surface"
+  },
+  {
+    "name": "Infinix INBOOK",
+    "price": 1099,
+    "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
+    "category": "Laptops",
+    "imageUrl": "https://cdn.dummyjson.com/product-images/9/thumbnail.jpg",
+    "seller": "Infinix"
+  },
+  {
+    "name": "HP Pavilion 15-DK1056WM",
+    "price": 1099,
+    "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+    "category": "Laptops",
+    "imageUrl": "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg",
+    "seller": "HP Pavilion"
+  }
+]

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    {{>css}}
+    <style>
+        .home-product-list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            column-gap: 1rem;
+            row-gap:  2rem;
+        }
+    </style>
+</head>
+<body>
+    {{>navbar}}
+    
+    <div class="main-container">
+        <h1>Welcome to our Shopping Blocks</h1>
+        <div class="home-product-list">
+            {{#each products as |product|}}
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{product.imageUrl}}" alt="ProductImage">
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><strong>Name:</strong> {{product.name}}</li>
+                            <li><strong>Price:</strong> {{product.price}}</li>
+                            <li><strong>Description:</strong> {{product.description}}</li>
+                            <li><strong>Seller:</strong>  {{product.seller}}</li>
+                            
+                                <div class="button-group">
+                                    <button><a href="/shop/cart/add/{{product._id}}">
+                                    🛒
+                                    </a></button>
+                                    <button><a href="/shop/product/details/{{product._id}}">
+                                    View Details
+                                    </a></button>
+                                </div>
+                        </ul>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</body>
+</html>

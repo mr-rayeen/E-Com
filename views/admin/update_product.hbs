@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product</title>
+    {{>css}}
+</head>
+<body>
+    {{>navbar}}
+
+    <div class="main-container">
+        <div class="heading">
+        <h1>Welcome to Update Product Page!!</h1>
+        <br>
+        <h3>Here You can Update Your Product Details!</h3>
+    </div>
+    <br>
+        <div class="update-product-box">
+            <form action="/admin/product/update" method="post" class="update-product-form" >
+                    <div class="update-product-image">
+                        <img src="{{product.imageUrl}}" alt="Product Image">
+                    </div>
+                    <div class="update-product-details">
+                            <input type="text" name="name" value="{{product.name}}">
+                            <input type="text" name="price" value="{{product.price}}">
+                            <input type="text" name="imageUrl" value="{{product.imageUrl}}">
+                            <input type="text" name="seller" value="{{product.seller}}">
+                            <input type="text" name="category" value="{{product.category}}" >
+                            <textarea type="text" name="description" cols="20" rows="10" >{{product.description}}</textarea>
+                            <input type="hidden" name="id" value="{{product._id}}">
+                    </div>
+                    <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
