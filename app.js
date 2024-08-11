@@ -17,6 +17,7 @@ const hbs = require('hbs');
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 require("dotenv").config();
+const cors = require("cors");
 app.use(
 	session({
 		secret: process.env.SESSION_SECRET,
@@ -27,7 +28,7 @@ app.use(
 		}),
 	})
 );
-
+app.use(cors());
 const passport = require("./authentication/passport");
 app.use(passport.initialize());
 app.use(passport.session());
