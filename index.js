@@ -53,7 +53,10 @@ app.use('/admin', adminRouter);
 app.use('/shop', shopRouter);
 
 const homeRouter = require('./routes/home')
-app.use('/', homeRouter);
+app.use('/', (req, res, next) => {
+	console.log(process.cwd());
+	next();
+}, homeRouter);
 
 
 mongoose.connect(process.env.ATLASDB_PATH).then(() => {
