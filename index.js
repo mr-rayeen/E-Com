@@ -7,14 +7,14 @@ const hbs = require('hbs');
 const fs = require("fs");
 // const User = require('./models/user');
 
-app.use(async (req, res, next)=>{
-	let user = {
-		name: 'guest',
-		role: 'user'
-	}
-    req.user = user;
-    next();
-})
+// app.use(async (req, res, next)=>{
+// 	let user = {
+// 		name: 'guest',
+// 		role: 'user'
+// 	}
+//     req.user = user;
+//     next();
+// })
 //  Using Passport For Authentication
 const session = require("express-session");
 const MongoStore = require("connect-mongo");

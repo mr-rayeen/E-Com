@@ -34,12 +34,14 @@
                             <li><strong>Seller:</strong>  {{product.seller}}</li>
                             
                                 <div class="button-group">
+                                    {{#if user}}
                                     <button><a href="/shop/cart/add/{{product._id}}">
                                     🛒
                                     </a></button>
                                     <button><a href="/shop/product/details/{{product._id}}">
                                     View Details
                                     </a></button>
+                                    {{/if}}
                                 </div>
                         </ul>
                     </div>

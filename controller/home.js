@@ -26,7 +26,7 @@ module.exports.getHomePage = async (req, res, next) => {
 		products,
 		isLoggedIn: req.isAuthenticated(),
 		isAdmin,
-		user: req.user
+		user: req.user || false
     });
   } catch (err) {
     next(err);
