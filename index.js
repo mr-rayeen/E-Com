@@ -7,13 +7,14 @@ const hbs = require('hbs');
 const fs = require("fs");
 // const User = require('./models/user');
 
-// app.use(async (req, res, next)=>{
-//     let user = await User.findOne({
-//       _id: "662f9937da28288814294545"
-//     });
-//     req.user = user;
-//     next();
-// })
+app.use(async (req, res, next)=>{
+	let user = {
+		name: 'guest',
+		role: 'user'
+	}
+    req.user = user;
+    next();
+})
 //  Using Passport For Authentication
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
@@ -55,19 +56,7 @@ app.use('/admin', adminRouter);
 app.use('/shop', shopRouter);
 
 const homeRouter = require('./routes/home')
-app.use('/', (req, res, next) => {
-	console.log(process.cwd());
-	const currentDirectory = process.cwd(); // Get the current working directory
-
-	fs.readdir(currentDirectory, (err, files) => {
-		if (err) {
-			console.error("Error reading directory:", err);
-		} else {
-			console.log("Files in the current directory:", files);
-		}
-	});
-	next();
-}, homeRouter);
+app.use('/', homeRouter);
 
 
 mongoose.connect(process.env.ATLASDB_PATH).then(() => {
