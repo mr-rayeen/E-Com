@@ -4,6 +4,7 @@ const app = express();
 const PORT = 4000;
 const mongoose = require('mongoose'); 
 const hbs = require('hbs');
+const fs = require("fs");
 // const User = require('./models/user');
 
 // app.use(async (req, res, next)=>{
@@ -55,6 +56,15 @@ app.use('/shop', shopRouter);
 const homeRouter = require('./routes/home')
 app.use('/', (req, res, next) => {
 	console.log(process.cwd());
+	const currentDirectory = process.cwd(); // Get the current working directory
+
+	fs.readdir(currentDirectory, (err, files) => {
+		if (err) {
+			console.error("Error reading directory:", err);
+		} else {
+			console.log("Files in the current directory:", files);
+		}
+	});
 	next();
 }, homeRouter);
 
