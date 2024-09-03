@@ -22,7 +22,7 @@ module.exports.getHomePage = async (req, res, next) => {
   }
   try {
     let products = await Products.find();
-    res.render("index.hbs", {
+    res.render("index", {
 		products,
 		isLoggedIn: req.isAuthenticated(),
 		isAdmin,

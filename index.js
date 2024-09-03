@@ -36,11 +36,12 @@ app.use(passport.session());
 
 
 app.set('view engine', 'hbs');
+app.set("views", path.join(process.cwd(), "views"));
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(process.cwd(), 'public')));
 
 //  Registering Partials
-hbs.registerPartials(__dirname + '/views/partials');
+hbs.registerPartials(process.cwd() + '/views/partials');
 
 // Routes
 // /admin, /admin/abc, /admin/abc/def, /admin/abc/../../
